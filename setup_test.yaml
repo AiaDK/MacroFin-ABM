@@ -1,0 +1,64 @@
+# estimation setup ~ {options}
+estim: 
+  seed: 42 # seed for random number generator
+  sim: 50 # number of simulations
+  macro_data: null # empirical data file, null for simulated pseudo-empirical data ~ {"Data_US_all_272.csv", null}
+  fin_data: null # empirical data file, null for simulated pseudo-empirical data ~ {"SP500.csv", null}
+  
+# baseline model parameters
+macro_model:
+  obs: 272 # number of observations 
+  tau: 0.371 # 
+  kappa: 0.213 # 
+  phi_y: 0.05 # 
+  phi_pi: 1.23 # 
+  eta: 0.21 # 
+  iota: 0.0 # 
+  mu: 0.38 # 
+  gamma: 1.49 #  
+  nu: 0.99 # discount rate
+  rho: 0 # 
+  sig_y: 0.543 # 
+  sig_pi: 0.24 #  
+  sig_r: 0.151 # 
+  
+fin_model:
+  obs: 17136 # number of observations 
+  psi: 0.02 # Sensitivity of fundamentalist demand to current levels of mid-pricing.
+  chi: 2.01 # Sensitivity of chartist demand to past trends.
+  sig_f: 0.835 # Fundamentalist demand standard deviation.
+  sig_c: 4.02 # Chartist demand standard deviation.
+  delta_0: -0.182 # Degree of predisposition of trader agents to fundamentalism.
+  delta_h: 2.14 # Strength of agent herding tendencies.
+  delta_m: 13.12 # Attractiveness of fundamentalism due to current levels of mispricing.
+  ups: 0.01 # Aggregate demand scaling factor.
+  beta: 1 # Intensity of choice for agent strategy switching.
+  p_1: 0
+  
+
+
+
+
+
+# macro
+#extra:
+  #obs: 500 # number of observations for generated data
+  #ifra: 0.3333 # originally
+  #kappa: 0.213 #
+
+# optimization setup ~ {options}
+#opt:
+  #optimizer: "opt" # optimization package, "opt" for Optim.jl, "bbo" for BlackBoxOptim.jl ~ {"opt", "bbo"}
+  #inits: 1 # number of initial points
+  #sim: 1000 # number of simulations, default 1000 for simulated pseudo-empirical data, 2000 for empirical data
+  #iter: 40 # number of inner iterations, default 40 for Optim.jl, 4000 for BlackBoxOptim.jl
+  #iter_out: 2 # number of outer iterations, only relevant for Optim.jl
+  #delta_und: 0.0 # bandwith undersmoothing, zero for no undersmoothing
+
+  #pbar: 0.0 # steady states
+  #burn: 1000 # burn-in period length
+  #model: "brf_hom_trN" # model identifier, see fcn_parameters.jl and fcn_model.jl for details ~ {"brf_hom_all", "brf_hom_trN", "brf_hom_trK", "reh_hom_all", "reh_hom_alN", "reh_hom_alC"}
+  #cali: "jb2efb" # calibration identifier, see fcn_parameters.jl for details and valid model-calibration combinations ~ {"jb2efb", "jb2efb1", "jb2efbtau02kap005", "van01sd"}
+  #cons: "bas" # search constraints identifier, see fcn_parameters.jl for details ~ {"bas", "ph0"}
+  #omega: 1800.0 # penalty term (Gaunersdorfer et al., 2008; Jang and Sacht, 2021), Inf sets PT to 1 => no impact
+  

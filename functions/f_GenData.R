@@ -34,9 +34,6 @@ f_GenData <- function(setup, c_1, c_2, h, quarters){
   fra[1:3, ] <- 1/3
   
   # generate random noise (normally distributed)
-  # macro_noise <- rbind(rnorm(macro_obs, mean = 0, sd = macro_params$sig_y), 
-  #                      rnorm(macro_obs, mean = 0, sd = macro_params$sig_p), 
-  #                      rnorm(macro_obs, mean = 0, sd = macro_params$sig_r))
   macro_noise <- array(rnorm(3 * sim * setup$macro_model$obs, mean = 0, sd = 1), 
                        dim = c(3, sim, setup$macro_model$obs))
   
@@ -70,8 +67,6 @@ f_GenData <- function(setup, c_1, c_2, h, quarters){
   d_c[1, ] <- 0
   
   # generate random noise (normally distributed)
-  # fin_noise <- rbind(rnorm(fin_obs, mean = 0, sd = fin_params$sig_f), 
-  #                    rnorm(fin_obs, mean = 0, sd = fin_params$sig_c))
   fin_noise <- array(rnorm(3 * sim * setup$fin_model$obs, mean = 0, sd = 1), 
                      dim = c(2, sim, setup$fin_model$obs))
   
@@ -137,25 +132,6 @@ f_GenData <- function(setup, c_1, c_2, h, quarters){
     # recalculate average mean values
     yps_avg_l <- matrix(c(mean(yps[1:(q-1), 1]), mean(yps[1:(q-1), 2]), mean(yps[1:(q-1), 3])))
     yps_avg_ll <- matrix(c(mean(yps[1:(q-2), 1]), mean(yps[1:(q-2), 2]), mean(yps[1:(q-2), 3])))
-    
-    ###
-    # setup$estim$sim <- 1
-    # 
-    # yps_l <-  t(yps[q-1, , drop = FALSE])
-    # yps_ll <- t(yps[q-2, , drop = FALSE])
-    # yps_lll <- t(yps[q-3, , drop = FALSE])
-    # yps_avg_l
-    # yps_avg_ll
-    # ADA_ll <- t(ADA[q-2, , drop = FALSE])
-    # U_ll <- t(U[q-2, , drop = FALSE])
-    # fra_ll <- t(fra[q-2, , drop = FALSE])
-    # sim <- 1
-    # noise <- macro_noise[, , q, drop = FALSE]
-    # s_q_ <- s_q[q]
-    # d_s <- delta_s[q]
-    # c_1 <- 0.3
-    # c_2 <- 16
-    ###
     
     # calculate next macro observation
     macro_out <- f_MacroModel(macro_params, 

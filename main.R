@@ -41,7 +41,7 @@ if (is.null(setup$estim$macro_data) & is.null(setup$estim$fin_data)){
   
 } else {
   
-  #! DOES NOT WORK WITH REAL DATA -> find the reason
+  #! DOES NOT WORK WITH REAL DATA -> fix
   
   # load empirical data 
   data <- f_LoadData(setup)

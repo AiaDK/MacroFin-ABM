@@ -1,17 +1,17 @@
 # Agent-Based Modeling of Financial-Macroeconomic Systems  
 **Empirical Estimation of Wealth, Cost, and Misperception Channels**  
 
-## 📘 Overview
+## Overview
 
-This repository contains the R code developed for the seminar paper _"Agent-Based Modeling of Financial-Macroeconomic Systems: Empirical Estimation of Wealth, Cost, and Misperception Channels". The project implements an integrated agent-based model combining a heuristic-switching macroeconomic framework with a financial market agent-based model. Parameters are estimated via a genetic algorithm using simulated data.
+This repository contains the R code developed for the seminar paper "Agent-Based Modeling of Financial-Macroeconomic Systems: Empirical Estimation of Wealth, Cost, and Misperception Channels". The project implements an integrated agent-based model combining a heuristic-switching macroeconomic framework with a financial market agent-based model. Parameters are estimated via a genetic algorithm using simulated data.
 
-### 📚 Model References
+### Model References
 - Macroeconomic model based on: Kukacka & Zila (2024)
 - Financial market model based on: Franke & Westerhoff (2011, 2012)
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 project-root/
@@ -28,9 +28,9 @@ project-root/
 
 ---
 
-## 🧠 Model Description
+## Model Description
 
-### 🔹 Integrated Framework
+### Integrated Framework
 
 The simulation integrates two key components:
 
@@ -55,7 +55,7 @@ The simulation integrates two key components:
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ### 1. Configuration  
 Edit `setup_test.yaml` to define:
@@ -82,7 +82,7 @@ Edit `setup_test.yaml` to define:
 
 ---
 
-## 🧪 Parameter Estimation
+## Parameter Estimation
 
 - Parameters estimated:
   - `c₁`: Wealth effect (∈ [–1, 1.2])
@@ -102,7 +102,7 @@ Edit `setup_test.yaml` to define:
 
 ---
 
-## 📚 References
+## References
 
 - Kukacka, J., & Zila, E. (2024). *Wealth, Cost, and Misperception: Empirical Estimation of Three Interaction Channels in a Financial-Macroeconomic Agent-Based Model*. IES Working Paper 22/2024.
 - Bask, M. (2012). Asset price misalignments and monetary policy. International Journal of Finance & Economics 17 (3), 221–241.

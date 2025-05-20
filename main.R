@@ -26,15 +26,7 @@ if (is.null(setup$estim$macro_data) & is.null(setup$estim$fin_data)){
   quarters <- read.csv("data/quarters.csv", header = FALSE)
   quarters <- quarters$V1
   set.seed(setup$estim$seed)
-  data <- f_GenData(setup, c_1, c_2, h, quarters)
-  
-  # plot(data$p,
-  #       main = "S&P",
-  #       xlab = "daily",
-  #       ylab = "log price",
-  #       type = "l",
-  #       col = "blue")
-  
+  data <- f_GenData(setup, c_1, c_2, h, quarters)  
   daysQ <- data$dQ
   
   cat("##- Pseudo-empirical data generated! -## \n")

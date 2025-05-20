@@ -5,10 +5,9 @@
 
 This repository contains the R code developed for the seminar paper _"Agent-Based Modeling of Financial-Macroeconomic Systems: Empirical Estimation of Wealth, Cost, and Misperception Channels". The project implements an integrated agent-based model combining a heuristic-switching macroeconomic framework with a financial market agent-based model. Parameters are estimated via a genetic algorithm using simulated data.
 
-The model is primarily based on:
-
-- **Macroeconomic model**: Kukacka & Zila (2024), *Wealth, Cost, and Misperception: Empirical Estimation of Three Interaction Channels in a Financial-Macroeconomic Agent-Based Model*.
-- **Financial model**: Franke & Westerhoff (2011, 2012)
+### 📚 Model References
+- Macroeconomic model based on: Kukacka & Zila (2024)
+- Financial market model based on: Franke & Westerhoff (2011, 2012)
 
 ---
 

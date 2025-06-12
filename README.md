@@ -85,9 +85,9 @@ Edit `setup_test.yaml` to define:
 ## Parameter Estimation
 
 - Parameters estimated:
-  - `c₁`: Wealth effect (∈ [–1, 1.2])
-  - `c₂`: Cost effect (∈ [0, 30])
-  - `h`: Misperception effect (∈ [0, 1.5])
+  - `c₁`: Wealth effect (∈ [–1, 1.2]) (for simulated data was set to 0.309)
+  - `c₂`: Cost effect (∈ [0, 30]) (for simulated data was set to 16.3)
+  - `h`: Misperception effect (∈ [0, 1.5]) (for simulated data was set to 0.589)
 
 - Estimation via **Genetic Algorithm**:
   - Binary-encoded chromosomes (16 bits per parameter)
@@ -99,7 +99,7 @@ Edit `setup_test.yaml` to define:
 
 - Best result achieved:  
   `f(c₁ = 0.3054, c₂ = 16.3202, h = 0.4053) = 0.5911`
-
+  
 ---
 
 ## References
